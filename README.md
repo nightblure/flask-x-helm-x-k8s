@@ -2,6 +2,14 @@
 
 ---
 
+## Deployment files:
+* [Without Helm](https://github.com/nightblure/flask-x-helm-x-k8s/blob/main/k8s/deployment.yaml)
+* [With Helm](https://github.com/nightblure/flask-x-helm-x-k8s/blob/main/k8s/helm/templates/deployment.yaml)
+
+Deployment with **Helm** includes values from the [Chart](https://github.com/nightblure/flask-x-helm-x-k8s/blob/main/k8s/helm/Chart.yaml) and [Values](https://github.com/nightblure/flask-x-helm-x-k8s/blob/main/k8s/helm/values.yaml)
+
+---
+
 ## Requirements:
 
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)
