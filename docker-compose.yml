@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+
+  app:
+    container_name: app
+    # env_file: src/.env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
