@@ -5,7 +5,7 @@ metadata:
   labels:
     app: flaskapp
 spec:
-  replicas: 3
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: flaskapp
@@ -15,11 +15,11 @@ spec:
         app: flaskapp
     spec:
       containers:
-      - name: flask-k8s
-        image: "nightblure/flask-k8s:latest"
-        imagePullPolicy: Never
+      - name: {{ .Chart.Name }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
-        - containerPort: 5000
+        - containerPort: {{ .Values.service.targetPort }}
 ---
 apiVersion: v1
 kind: Service
@@ -30,5 +30,5 @@ spec:
   selector:
     app: flaskapp-deployment
   ports:
-    - port: 80
-      targetPort: 5000
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
