@@ -22,6 +22,7 @@ Deployment with **Helm** includes values from the [Chart](https://github.com/nig
 ## How to run:
 1. **Build** docker image: ```make up```
 2. Deploy with **Helm chart** or **without**: ```make deploy-with-helm``` or ```make k8s-deploy```
+3. [Try to send HTTP request](http://localhost:5999)
 
 ---
 

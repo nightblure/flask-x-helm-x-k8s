@@ -26,9 +26,10 @@ kind: Service
 metadata:
   name: flask-lb-service
 spec:
-  type: LoadBalancer
+  type: {{ .Values.service.type }}
   selector:
-    app: flaskapp-deployment
+    app: flaskapp
   ports:
-    - port: {{ .Values.service.port }}
+    - protocol: TCP
+      port: {{ .Values.service.port }}
       targetPort: {{ .Values.service.targetPort }}

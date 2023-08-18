@@ -28,7 +28,8 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: flaskapp-deployment
+    app: flaskapp
   ports:
-    - port: 80
+    - protocol: TCP
+      port: 5999
       targetPort: 5000

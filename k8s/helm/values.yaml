@@ -2,12 +2,12 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-replicaCount: 3
+replicaCount: 2
 
 image:
   repository: nightblure/flask-k8s
   pullPolicy: Never
-  tag: "latest"
+  tag: latest
 
 imagePullSecrets: []
 nameOverride: ""
@@ -37,7 +37,7 @@ securityContext: {}
 
 service:
   type: LoadBalancer
-  port: 80
+  port: 5999
   targetPort: 5000
 
 ingress:
