@@ -30,3 +30,4 @@ Deployment with **Helm** includes values from the [Chart](https://github.com/nig
 * Look ```kubectl describe pods```
 * Look ```helm list```
 * [Microservices in Python using Flask Framework | Dockerize and Deploy to Kubernetes with Helm](https://www.youtube.com/watch?v=SdTzwYmsgoU&ab_channel=DevOpsMadeEasy)
+* [Kubernetes Lessons](https://www.youtube.com/playlist?list=PL3SzV1_k2H1VDePbSWUqERqlBXIk02wCQ)
